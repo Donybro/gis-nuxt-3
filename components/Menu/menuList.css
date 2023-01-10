@@ -1,0 +1,81 @@
+.menuList_Wrapper{
+    display: flex;
+    gap: 10px;
+}
+.menuList_listItem{
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: 'Inter',sans-serif;
+}
+/*.menuList_listItem:hover{*/
+/*    background: #716cd3;*/
+/*}*/
+.bottomLeftDropdown{
+    position: absolute;
+    top: calc(8px + 100%);
+    right: 10%;
+    min-width: 300px;
+}
+.bottomRightDropdown{
+    position: absolute;
+    top: calc(8px + 100%);
+    left: 10%;
+    min-width: 300px;
+}
+.topRightDropdown{
+    position: absolute;
+    bottom: calc(8px + 100%);
+    left: 10%;
+    min-width: 300px;
+}
+.topLeftDropdown{
+    position: absolute;
+    bottom: calc(8px + 100%);
+    right: 10%;
+    min-width: 300px;
+}
+.bottomDropdown{
+    position: absolute;
+    top: calc(8px + 100%);
+    min-width: 300px;
+}
+.topDropdown{
+    position: absolute;
+    bottom: calc(8px + 100%);
+    min-width: 300px;
+}
+
+.bottomLeftDropdownCommon{
+    position: absolute;
+    top: calc(8px + 100%);
+    right: 10%;
+    min-width: 200px;
+}
+.bottomRightDropdownCommon{
+    position: absolute;
+    top: calc(8px + 100%);
+    left: 10%;
+    min-width: 200px;
+}
+.topRightDropdownCommon{
+    position: absolute;
+    bottom: calc(8px + 100%);
+    left: 10%;
+    min-width: 200px;
+}
+.topLeftDropdownCommon{
+    position: absolute;
+    bottom: calc(8px + 100%);
+    right: 10%;
+    min-width: 200px;
+}
+.bottomDropdownCommon{
+    position: absolute;
+    top: calc(8px + 100%);
+    min-width: 200px;
+}
+.topDropdownCommon{
+    position: absolute;
+    bottom: calc(8px + 100%);
+    min-width: 200px;
+}

@@ -1,0 +1,8 @@
+export const OZCOM = 'OZCOM'
+export const ACTIVITY = 'ACTIVITY'
+export const INTERACTIVE_SERVICES = 'INTERACTIVE_SERVICES'
+export const DOCUMENTS = 'DOCUMENTS'
+export const REMIND = 'REMIND'
+export const EVENTS = 'EVENTS'
+export const INFORMATION_SERVICE = 'INFORMATION_SERVICE'
+export const NETWORK = 'NETWORK'

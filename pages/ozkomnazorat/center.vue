@@ -1,0 +1,39 @@
+<template>
+  <HtmlPageWrapper :pageData="pageData"/>
+</template>
+
+<script setup>
+import {getOzkomAboutBySlug} from "../../api/getOzkomnazoratData";
+import HtmlPageWrapper from "../../components/HtmlPageWrapper";
+
+
+const route = useRoute()
+
+
+const pageData = ref({
+  title: '',
+  description: ''
+})
+
+const {data} = await getOzkomAboutBySlug({slug: route.path}, 'center')
+if (data && data?.value) {
+  pageData.value = data?.value[0]
+}
+
+const {locale, t: $t} = useI18n()
+
+useHead({
+  title: $t('navbar.ozcom-full')
+})
+
+watch(() => locale.value, async () => {
+  const {data} = await getOzkomAboutBySlug({slug: route.path}, 'center')
+  if (data && data?.value) {
+    pageData.value = data?.value[0]
+  }
+})
+</script>
+
+<style scoped>
+
+</style>
