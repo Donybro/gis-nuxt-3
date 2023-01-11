@@ -17,6 +17,7 @@
       <div
           class="h-full lg:py-[40px] px-[40px] xl:px-[0px] pt-[50px] xl:pt-[0px] flex items-center justify-center xl:hidden">
         <img alt="" class="w-full h-full object-contain" src="/icons/animatedLogo.png">
+<!--        <nuxt-img src="/icons/animatedLogo.png" fit="contain" />-->
       </div>
     </div>
     <div class="min-h-[calc(100vh_-_152px)]">

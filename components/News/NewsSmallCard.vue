@@ -1,8 +1,7 @@
 <template>
   <div class="flex flex-col group gap-[8px] w-[300px] xl:w-[342px] cursor-pointer" @click="$emit('click',news.id)">
     <div class="w-full h-[200px]">
-      <img v-if="getActivePhotoSrc(news?.images)"
-           :src="getActivePhotoSrc(news?.images)?.photo" alt="" class="w-full h-full object-cover">
+      <nuxt-img v-if="activePhoto" width="342" height="200" class="object-cover object-top" alt="leader"  format="webp" :src="activePhoto.replace('http://', 'https://')" />
       <Icon v-else class="w-full h-full object-cover" icon="material-symbols:no-photography-rounded"/>
     </div>
     <div v-if="news?.category" class="">
@@ -43,12 +42,9 @@ const props = defineProps({
     })
   }
 })
+const {news} = toRefs(props)
+const activePhoto = computed(()=>news.value.images.find(img => img.active === true)?.photo )
 
-
-function getActivePhotoSrc(images) {
-  let activePhoto = images.find(img => img.active === true)
-  return activePhoto
-}
 
 </script>
 

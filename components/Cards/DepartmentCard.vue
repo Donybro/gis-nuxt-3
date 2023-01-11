@@ -4,7 +4,7 @@
       <div
           class="p-[24px] border border-border_primary bg-secondary flex flex-col items-center xl:flex-row xl:items-start xl:flex-row  gap-[24px] w-full">
         <div class="w-[118px] sm:w-[236px] h-[125px] sm:h-[250px]">
-          <img :src="department.photo" class="w-full h-full object-cover object-top" alt="">
+          <nuxt-img width="236" class="w-full h-full object-cover object-top" alt="card"  format="webp" :src="department.photo.replace('http://', 'https://')" />
         </div>
         <div class="flex flex-col justify-between w-full">
           <div class="">

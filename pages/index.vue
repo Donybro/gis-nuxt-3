@@ -34,6 +34,7 @@ import {useHead} from "nuxt/app";
 
 const {t: $t} = useI18n()
 
+
 useHead({
   title: $t('navbar.ozcom-full')
 })
@@ -42,5 +43,6 @@ definePageMeta({
 })
 
 </script>
+
 
 <style></style>
