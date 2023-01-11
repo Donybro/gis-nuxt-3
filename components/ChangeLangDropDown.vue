@@ -49,11 +49,13 @@
 import { Icon } from '@iconify/vue';
 import {useMenuStore} from "~/store/menu";
 import Dropdown from "./Dropdown/DropDown";
-const { locale,setLocale} = useI18n()
+const { locale} = useI18n()
 const localeCookie = useCookie('locale')
-const setAppLocale = (l)=>{
-  setLocale(l)
+
+const setAppLocale = async (l)=>{
   localeCookie.value = l
+  await nextTick()
+  locale.value = l
   isOpen.value = false
 }
 

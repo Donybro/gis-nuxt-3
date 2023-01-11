@@ -2,6 +2,7 @@
   <div class="p-[24px] border border-border_primary bg-secondary items-center flex flex-col gap-[24px] w-full">
     <div class="w-[366px] h-[388px]">
       <img :src="departmentWorker.photo" class="w-full h-full object-cover" alt="">
+<!--      <nuxt-img  width="366p" height="388"  alt="worker"  format="webp" :src="departmentWorker.photo.replace('http://', 'https://')" />-->
     </div>
     <div class="flex flex-col gap-[12px]">
       <h2 class="font-semibold font-inter text-[1.25em] text-center text-text_secondary">{{`${departmentWorker.last_name} ${departmentWorker.first_name} ${departmentWorker.father_name}`}}</h2>

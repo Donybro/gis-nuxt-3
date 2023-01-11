@@ -1,9 +1,8 @@
 <template>
   <HoverGradientBox>
-    <div
-        class="p-[24px] bg-secondary hover:bg-primary_hovered border border-border_primary flex flex-col items-center xl:flex-row xl:items-start xl:flex-row gap-[24px] w-full">
+    <div class="p-[24px] bg-secondary hover:bg-primary_hovered border border-border_primary flex flex-col items-center xl:flex-row xl:items-start xl:flex-row gap-[24px] w-full">
       <div class="w-[118px] sm:w-[236px] h-[125px] sm:h-[250px]">
-        <img :src="leader.photo" class="w-full h-full object-cover object-top" alt="">
+        <nuxt-img width="350" class="w-full h-full object-cover"  alt="leader"  format="webp" :src="leader.photo.replace('http://', 'https://')" />
       </div>
       <div class="flex flex-col justify-between w-full">
         <div class="">

@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center gap-[8px] xl:gap-[16px] cursor-pointer" @click="$emit('click')">
-    <img src="/icons/Logo.svg" class="w-[83px] h-[83px] p-[5px]"/>
-    <img src="/icons/Flag.png"/>
+    <nuxt-img width="83" height="83" class="p-[5px]" alt="logo"  format="webp" src="/icons/Logo.svg" />
+    <nuxt-img width="7" height="83"  alt="flag"  format="webp" src="/icons/Flag.png" />
     <div class="">
       <h1 class="title">{{ $t('navbar.ozcom') }}</h1>
       <p class="max-w-[280px]">{{ $t('navbar.ozcom-full') }}</p>
