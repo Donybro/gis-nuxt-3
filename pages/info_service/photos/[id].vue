@@ -7,7 +7,7 @@
           <div class="row-span-4 col-span-2">
             <div class="shadow cursor-pointer group">
               <a :href="firstImage?.image" class="w-full h-[468px] block" data-fancybox="gallery">
-                <img v-if="firstImage?.image" :src="firstImage?.image" class="w-full h-full object-cover"/>
+                <nuxt-img v-if="firstImage?.image" height="468" class="w-full h-full object-cover" alt="photo"  format="webp" :src="firstImage?.image.replace('http://', 'https://')" />
                 <Icon v-else class="w-full h-full text-text_secondary" icon="bi:image-fill"/>
               </a>
             </div>
@@ -15,7 +15,7 @@
           <div class="flex flex-col gap-[24px]">
             <div v-for="img in secondAndThirdImages" :key="img.id" class="shadow cursor-pointer group h-[222px]">
               <a :href="img.image" class="w-full h-full block" data-fancybox="gallery">
-                <img v-if="img.image" :src="img.image" class="w-full h-[222px] object-cover"/>
+                <nuxt-img v-if="img?.image" height="222" class="w-full h-[222px] object-cover" alt="photo"  format="webp" :src="img?.image.replace('http://', 'https://')" />
                 <Icon v-else class="w-full h-full text-text_secondary" icon="bi:image-fill"/>
               </a>
             </div>
@@ -24,7 +24,7 @@
         <div class="hidden xl:grid grid-cols-3 gap-[24px] my-[24px]">
           <div v-for="img in otherImages" :key="img.id" class="shadow cursor-pointer group h-[222px]">
             <a :href="img.image" class="w-full h-full block" data-fancybox="gallery">
-              <img v-if="img.image" :src="img.image" class="w-full h-full object-cover"/>
+              <nuxt-img v-if="img?.image" height="222" class="w-full h-full object-cover" alt="photo"  format="webp" :src="img?.image.replace('http://', 'https://')" />
               <Icon v-else class="w-full h-full text-text_secondary" icon="bi:image-fill"/>
             </a>
           </div>
@@ -33,7 +33,7 @@
           <div v-for="img in [firstImage,...secondAndThirdImages,...otherImages]" :key="img.id"
                class="shadow cursor-pointer group">
             <a :href="img?.image" class="w-full h-[238px] block" data-fancybox="gallery">
-              <img v-if="img?.image" :src="img?.image" class="w-full h-full object-cover"/>
+              <nuxt-img v-if="img?.image" height="238" class="w-full h-full object-cover" alt="photo"  format="webp" :src="img?.image.replace('http://', 'https://')" />
               <Icon v-else class="w-full h-full text-text_secondary" icon="bi:image-fill"/>
             </a>
           </div>

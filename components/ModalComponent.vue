@@ -6,7 +6,7 @@
       @click="clickAwayHandler"
   >
     <div
-        class="overflow-y-auto"
+        class="overflow-y-auto modal_content"
         v-bind="$attrs"
         @click.stop
     >
@@ -99,30 +99,22 @@ export default {
       this.isOpen = true;
     },
   },
-  watch:{
-    // isOpen(isOpen){
-    //   if(isOpen){
-    //     let html = document.getElementsByTagName('html')[0]
-    //     let body = document.getElementsByTagName('body')[0]
-    //     html.style.height = '100%'
-    //     body.style.height = '100%'
-    //     html.style.overflow = 'hidden'
-    //     body.style.overflow = 'hidden'
-    //   }
-    //   else{
-    //     let html = document.getElementsByTagName('html')[0]
-    //     let body = document.getElementsByTagName('body')[0]
-    //     html.style.height = 'auto'
-    //     body.style.height = 'auto'
-    //     html.style.overflow = 'auto'
-    //     body.style.overflow = 'auto'
-    //   }
-    // }
-  }
 };
 
 </script>
 
 <style scoped>
-
+.modal_content {
+  animation: fadeInAnimation ease 200ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 </style>

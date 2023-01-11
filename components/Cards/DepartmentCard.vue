@@ -1,8 +1,7 @@
 <template>
   <div class="w-full cursor-pointer">
     <HoverGradientBox>
-      <div
-          class="p-[24px] border border-border_primary bg-secondary flex flex-col items-center xl:flex-row xl:items-start xl:flex-row  gap-[24px] w-full">
+      <div class="p-[24px] border border-border_primary bg-secondary flex flex-col items-center xl:flex-row xl:items-start xl:flex-row  gap-[24px] w-full">
         <div class="w-[118px] sm:w-[236px] h-[125px] sm:h-[250px]">
           <nuxt-img width="236" class="w-full h-full object-cover object-top" alt="card"  format="webp" :src="department.photo.replace('http://', 'https://')" />
         </div>

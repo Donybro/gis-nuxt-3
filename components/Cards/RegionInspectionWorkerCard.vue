@@ -4,7 +4,9 @@
          @click.stop.prevent="$emit('card-click',inspectionWorker)"
     >
       <div class="w-[150px] sm:w-[236px] h-[125px] sm:h-[250px]">
-        <img :src="inspectionWorker.photo" class="w-full h-full object-cover object-top" alt="">
+<!--        <img :src="inspectionWorker.photo" class="w-full h-full object-cover object-top" alt="">-->
+        <nuxt-img  width="236" height="250" class="w-full h-full object-cover object-top"  alt="image"  format="webp" :src="inspectionWorker.photo.replace('http://', 'https://')" />
+
       </div>
       <div class="flex flex-col justify-between w-full">
         <div class="">

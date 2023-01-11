@@ -4,7 +4,7 @@
       <div class="col-span-12 xl:col-span-9">
         <h1 class="font-montserrat font-semibold text-[1.35em] xl:text-[2em] xl:leading-[44px] text-white mb-[40px]">
           {{ $t('page-titles.ozcom.structure') }}</h1>
-        <img :src="structure[0]?.photo" alt="" class="w-full">
+        <nuxt-img v-if="structure[0]?.photo"  class="w-full" alt="photo"  format="webp" :src="structure[0]?.photo.replace('http://', 'https://')" />
       </div>
       <div class="xl:col-span-3">
         <SideMenuNavigator/>

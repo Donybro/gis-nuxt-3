@@ -50,14 +50,6 @@ export default defineNuxtConfig({
             '2xl': 1440,
             '3xl': 1680,
         },
-        presets: {
-            cover: {
-                modifiers: { fit: 'cover', format: 'webp' },
-            },
-            contain: {
-                modifiers: { fit: 'contain', format: 'webp' },
-            },
-        },
     },
     build: {
         transpile: [/echarts/, 'swiper/vue', 'maska'],

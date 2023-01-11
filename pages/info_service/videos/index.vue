@@ -24,14 +24,6 @@
               <VideoWrapper v-for="video in [firstVideo,...secondAndThirdVideos,...otherVideos]" :image="video.cover"
                             :source="video.link" :title="video.name" class="w-full h-full h-[238px]"/>
             </div>
-
-            <!--            <div class="relative" v-for="cat in videosCategory">-->
-            <!--              <nuxt-link :to="`/info_service/videos/${cat.id}`">-->
-            <!--                <img :src="cat.cover" class="w-[500px] h-[300px] object-cover" alt="cover">-->
-            <!--                <img src="/img/GradientHeader.svg" class="absolute h-full object-cover top-0 bottom-0 left-0 z-10" alt="GradientHeader">-->
-            <!--                <p class="absolute text-white w-[500px] font-roboto h-[50px] bottom-2 left-1 z-20">{{cat.name}}</p>-->
-            <!--              </nuxt-link>-->
-            <!--            </div>-->
           </ClientOnly>
         </div>
       </div>

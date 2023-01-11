@@ -10,10 +10,7 @@
           }"
       >
       </div>
-      <img v-if="mark?.photo"
-           :src="mark?.photo" alt="photo"
-           class="relative z-[2] w-full h-full object-contain"
-      >
+      <nuxt-img v-if="mark?.photo" :src="mark?.photo.replace('http://', 'https://')" class="relative z-[2] w-full h-full object-contain" alt="photo"  format="webp"  />
       <Icon v-if="!mark?.photo" class="w-full h-full object-cover" icon="material-symbols:no-photography-rounded"/>
     </div>
     <div v-if="mark?.sub_menu" class="">

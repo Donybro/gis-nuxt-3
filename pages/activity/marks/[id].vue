@@ -14,10 +14,7 @@
                   }"
               >
               </div>
-              <img v-if="mark?.photo"
-                   :src="mark?.photo" alt="photo"
-                   class="relative z-[2] w-full h-full object-contain"
-              >
+              <nuxt-img v-if="mark?.photo" class="relative z-[2] w-full h-full object-contain" alt="photo"  format="webp" :src="mark?.photo.replace('http://', 'https://')" />
             </div>
             <div class="col-span-3 xl:col-span-2">
               <div class="flex flex-col">

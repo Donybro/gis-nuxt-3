@@ -2,7 +2,7 @@
   <div
       class="bg-secondary border-b border-text_secondary py-[16px] flex flex-col md:flex-row justify-start md:justify-between  items-center">
     <div class="hidden xl:flex items-center my-auto gap-[16px]">
-      <img src="/icons/Logo.png" class="w-[40px] h-[40px]" alt="logo">
+      <nuxt-img  width="40" height="40"  alt="logo"  format="webp" src="/icons/Logo.png" />
       <h5 class="font-roboto text-white font-bold text-[1.15em] xl:text-[1.5em]">{{ $t('navbar.ozcom-short') }}</h5>
     </div>
     <div class="grid grid-cols-1 gap-[12px] xl:flex xl:items-center xl:gap-[24px]">

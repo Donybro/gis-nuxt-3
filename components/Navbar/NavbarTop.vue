@@ -2,8 +2,8 @@
   <div class="py-[8px] flex justify-between container mx-auto">
     <nuxt-link class="inline xl:hidden" to="/">
       <div class="flex items-center gap-[8px] xl:hidden">
-        <img src="/icons/Logo.svg" class="w-[30px] h-[30px]"/>
-        <img src="/icons/Flag.png" class="h-[30px]"/>
+        <nuxt-img  width="30" height="30"   alt="image"  format="webp" src="/icons/Logo.svg" />
+        <nuxt-img  height="30"   alt="image"  format="webp" src="/icons/Flag.png" />
         <h1 class="title">{{ $t('navbar.ozcom') }}</h1>
       </div>
     </nuxt-link>

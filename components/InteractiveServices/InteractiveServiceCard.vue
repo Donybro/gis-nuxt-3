@@ -2,7 +2,7 @@
   <HoverGradientBox @click="$emit('click',slug)" class="cursor-pointer group">
     <div class="bg-secondary hover:bg-primary_hovered p-[24px] flex flex-col items-center">
       <div class="w-[120px] h-[120px] p-[20px] bg-[#3C3976] mb-[40px]">
-        <img :src="iconSource" class="w-[80px] h-[80px]" alt="">
+        <nuxt-img v-if="iconSource"  width="80" height="80"   alt="image"  format="webp" :src="iconSource.replace('http://', 'https://')" />
       </div>
       <h4 class="font-semibold text-center text-[1.25em] leading-[24px] font-inter h-[48px] line-clamp-2  text-white mb-[18px]">
         {{ title }}</h4>

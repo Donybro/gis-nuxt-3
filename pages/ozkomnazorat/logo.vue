@@ -18,7 +18,7 @@
       </div>
       <div class="col-span-12 xl:col-span-7">
         <template v-if="pageData?.photo">
-          <img :src="pageData?.photo" alt="" class="w-full object-contain">
+          <nuxt-img class="w-full object-contain" alt="photo"  format="webp" :src="pageData?.photo.replace('http://', 'https://')" />
         </template>
         <tepmlate v-else>
           <Icon class="text-text_secondary" icon="material-symbols:no-photography-rounded" width="100%"/>

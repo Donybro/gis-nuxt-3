@@ -1,8 +1,7 @@
 <template>
   <div class="relative cursor-pointer" @click="$emit('click',news?.id)">
     <div class="h-[571px] w-full">
-      <img v-if="getActivePhotoSrc(news?.images)" class="h-full w-full object-cover"
-           :src="getActivePhotoSrc(news?.images)" alt="">
+      <nuxt-img v-if="activePhoto" height="571" width="1024" class="object-cover w-full h-full" alt="photo"  format="webp" :src="activePhoto.replace('http://', 'https://')" />
       <Icon v-else class="w-full h-full object-cover" icon="material-symbols:no-photography-rounded"/>
     </div>
     <div
@@ -55,11 +54,8 @@ onMounted(() => {
     htmlToTextNews.value = div.innerText
   }
 })
+const activePhoto = computed(()=>news.value.images.find(img => img.active === true)?.photo )
 
-function getActivePhotoSrc(images) {
-  let activePhoto = images.find(img => img.active === true)
-  return activePhoto?.photo
-}
 </script>
 
 <style scoped>

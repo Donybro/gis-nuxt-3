@@ -1,7 +1,7 @@
 <template>
       <div class="bg-secondary hover:bg-primary_hovered  p-[12px] flex flex-col items-center gap-[16px] border border-border_primary">
         <div class="">
-          <img :src="iconSource" class="w-full h-[62px] object-contain" alt="">
+          <nuxt-img height="62" class="w-full  object-contain" alt="photo"  format="webp" :src="iconSource.replace('http://', 'https://')" />
         </div>
         <p class="text-text_secondary text-center text-[1em] leading-[22px] font-inter line-clamp-3 h-[70px]">{{text}}</p>
       </div>

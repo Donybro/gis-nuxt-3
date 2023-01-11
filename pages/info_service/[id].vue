@@ -49,7 +49,7 @@
               >
                 <swiper-slide v-for="img in pageData.images" :key="img.photo">
                   <a :href="img.photo" class="w-full h-full" data-fancybox="info-service-photo">
-                    <img :src="img.photo" alt="" class="h-[325px] xl:h-[625px] w-full object-cover">
+                    <nuxt-img height="625" class="w-full  object-cover" alt="photo"  format="webp" :src="img.photo.replace('http://', 'https://')" />
                   </a>
                 </swiper-slide>
               </swiper>

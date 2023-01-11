@@ -7,7 +7,7 @@
           <div class="row-span-4 col-span-2">
             <div class="relative group">
               <nuxt-link :to="`/info_service/photos/${firstCategory.id}`">
-                <img :src="firstCategory.cover" class="object-cover h-[468px] w-full">
+                <nuxt-img  height="468" class="object-cover h-[468px] w-full" alt="photo"  format="webp" :src="firstCategory.cover.replace('http://', 'https://')" />
                 <img alt=""
                      class="absolute h-full object-cover top-0 bottom-0 left-0 z-10 group-hover:hidden"
                      src="/img/GradientHeader.svg">
@@ -19,7 +19,7 @@
           <div v-for="cat in secondAndThirdCategories" :key="cat.id" class="row-span-2 col-span-1">
             <div class="relative h-full w-full group">
               <nuxt-link :to="`/info_service/photos/${cat.id}`">
-                <img :src="cat.cover" class="object-cover h-full w-full">
+                <nuxt-img class="object-cover h-full w-full" alt="photo"  format="webp" :src="cat.cover.replace('http://', 'https://')" />
                 <img alt=""
                      class="absolute h-full object-cover top-0 bottom-0 left-0 z-10 group-hover:hidden"
                      src="/img/GradientHeader.svg">
@@ -32,7 +32,7 @@
         <div class="hidden xl:grid grid-cols-3 gap-[24px] mt-[24px]">
           <div v-for="cat in otherCategories" class="relative">
             <nuxt-link :to="`/info_service/photos/${cat.id}`">
-              <img :src="cat.cover" class="w-[342px] h-[250px] object-cover">
+              <nuxt-img width="342" height="250" class="w-[342px] h-[250px] object-cover" alt="photo"  format="webp" :src="cat.cover.replace('http://', 'https://')" />
               <img alt="" class="absolute h-full object-cover top-0 bottom-0 left-0 z-10" src="/img/GradientHeader.svg">
               <p class="absolute text-white line-clamp-2 text-[1.12em] font-bold  font-montserrat h-[50px] bottom-2 left-1 z-20 break-words">
                 {{ cat.name }}</p>
@@ -43,7 +43,7 @@
           <div v-for="cat in [firstCategory,...secondAndThirdCategories,...otherCategories]"
                class="relative bg-red-600">
             <nuxt-link :to="`/info_service/photos/${cat.id}`">
-              <img :src="cat.cover" class="w-full h-[250px] object-cover">
+              <nuxt-img  height="250" class="w-full h-[250px] object-cover" alt="photo"  format="webp" :src="cat.cover.replace('http://', 'https://')" />
               <img alt="" class="absolute h-full object-cover top-0 bottom-0 left-0 z-10" src="/img/GradientHeader.svg">
               <p class="absolute text-white line-clamp-2 text-[1.12em] font-bold  font-montserrat h-[50px] bottom-2 left-1 z-20 break-words">
                 {{ cat.name }}</p>
