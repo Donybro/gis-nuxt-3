@@ -8,6 +8,6 @@ const {locale} = useI18n()
 const localeCookie = useCookie('locale')
 if(localeCookie.value){
   locale.value = localeCookie.value
-}else localeCookie.value = locale.value
+}
 
 </script>

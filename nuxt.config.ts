@@ -18,15 +18,6 @@ export default defineNuxtConfig({
     },
     i18n: {
         detectBrowserLanguage: false,
-        locales: [
-            { code: 'en', file: 'en.json' },
-            { code: 'ru', file: 'ru.json' },
-            { code: 'uz', file: 'uz.json' },
-            { code: 'uzb', file: 'uzb.json' },
-        ],
-        lazy: true,
-        langDir: 'locales',
-        defaultLocale: 'uz',
         vueI18n: {
             legacy: false,
             globalInjection: true,
